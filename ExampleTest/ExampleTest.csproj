@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2754827E-0B98-46D4-B0F4-563F2ABC633B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExampleTest</RootNamespace>
+    <AssemblyName>ExampleTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\Arbalet.cs" />
+    <Compile Include="AbstractFactory\ElfFactory.cs" />
+    <Compile Include="AbstractFactory\FlyMovement.cs" />
+    <Compile Include="AbstractFactory\Hero.cs" />
+    <Compile Include="AbstractFactory\HeroFactory.cs" />
+    <Compile Include="AbstractFactory\Movement.cs" />
+    <Compile Include="AbstractFactory\RunMovement.cs" />
+    <Compile Include="AbstractFactory\Sword.cs" />
+    <Compile Include="AbstractFactory\VoinFactory.cs" />
+    <Compile Include="AbstractFactory\Weapon.cs" />
+    <Compile Include="Builder\Additives.cs" />
+    <Compile Include="Builder\Baker.cs" />
+    <Compile Include="Builder\Bread.cs" />
+    <Compile Include="Builder\BreadBuilder.cs" />
+    <Compile Include="Builder\Flour.cs" />
+    <Compile Include="Builder\RyeBreadBuilder.cs" />
+    <Compile Include="Builder\Salt.cs" />
+    <Compile Include="Builder\WheatBreadBuilder.cs" />
+    <Compile Include="FactoryMethod\Developer.cs" />
+    <Compile Include="FactoryMethod\House.cs" />
+    <Compile Include="FactoryMethod\PanelDeveloper.cs" />
+    <Compile Include="FactoryMethod\PanelHouse.cs" />
+    <Compile Include="FactoryMethod\WoodDeveloper.cs" />
+    <Compile Include="FactoryMethod\WoodHouse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prototype\Circle.cs" />
+    <Compile Include="Prototype\IFigure.cs" />
+    <Compile Include="Prototype\Rectangle.cs" />
+    <Compile Include="Singleton\Computer.cs" />
+    <Compile Include="Singleton\OS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
